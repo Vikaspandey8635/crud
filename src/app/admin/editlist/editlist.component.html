@@ -1,0 +1,44 @@
+<p>editlist works!</p>
+
+<div class="header">
+    <form [formGroup]="loginForm" (ngSubmit)="updatauser()">
+      <div >
+        <label>Name:</label><br>
+        <input  type="text" placeholder="Enter name" name="user" formControlName="user" #formdata><br>
+        <span  *ngIf="user && user.invalid && user.touched">This Field is required</span></div>
+      <br>
+      <div>
+        <label>Email:</label><br>
+        <input type="text" placeholder="Enter email" name="email" formControlName="email"><br>
+        <span  *ngIf="email && email.invalid && email.touched">This Field is required</span>
+      </div>
+      <br>
+      <div>
+        <label>Phone Number:</label><br>
+        <input type="tel" placeholder="Enter phone no" name="phone" formControlName="phone"><br>
+        <span  *ngIf="phone && phone.invalid && phone.touched">This Field is required</span>
+      </div>
+      <br>
+      <div>
+        <label>Address:</label><br>
+        <input type="text" placeholder="Enter Address" name="Address" formControlName="address"><br>
+        <span  *ngIf="address && address.invalid && address.touched">This Field is required</span>
+      </div>
+      <br>
+      <div>
+        <label>Password:</label><br>
+        <input type="password" placeholder="Enter Password" name="Password" formControlName="password"><br>
+        <span  *ngIf="password && password.invalid && password.touched">This Field is required</span>
+      </div>
+      <br>
+      <div>
+        <label>Confirm Password:</label><br>
+        <input type="password" placeholder="Enter Confirm Password" name="Confirm" formControlName="confirm"><br>
+        <span  *ngIf="confirm && confirm.invalid && confirm.touched">This Field is required</span>
+      </div>
+      <br>
+      <div>
+        <button type="submit">update</button> </div>
+    </form>
+  </div>
+<router-outlet> </router-outlet>
